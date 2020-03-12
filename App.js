@@ -1,23 +1,16 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import {Provider} from 'react-redux';
+import AppNavigator from './navigation/appNavigation';
+import {PersistGate} from 'redux-persist/es/integration/react';
+import {store, persistor} from './store/store';
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <Text style={styles.text}>Text 1234567890</Text>
-      <Icon name="rocket" size={30} color="#900" />
-    </SafeAreaView>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <AppNavigator />
+      </PersistGate>
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 30,
-    fontFamily: 'HelveticaNeueCyr-Thin',
-  },
-});
