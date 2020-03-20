@@ -1,16 +1,25 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+import {createStore, combineReducers, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
+import ReduxThunk from 'redux-thunk';
 import AppNavigator from './navigation/appNavigation';
-import {PersistGate} from 'redux-persist/es/integration/react';
-import {store, persistor} from './store/store';
+import weatherReducer from './store/reducers/weather';
+import {composeWithDevTools} from 'redux-devtools-extension';
+
+const rootReducer = combineReducers({
+  weather: weatherReducer,
+});
+
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(ReduxThunk)),
+);
 
 export default function App() {
   return (
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <AppNavigator />
-      </PersistGate>
+      <AppNavigator />
     </Provider>
   );
 }

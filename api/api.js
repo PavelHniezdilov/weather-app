@@ -1,7 +1,11 @@
-const apiUrl = 'https://pdl-app-abb6e.firebaseio.com/';
+const apiUrl = 'https://www.metaweather.com/';
 
-export function getCompanies(lng) {
-  return callApi(`${lng}/companies.json`);
+export function getCurrentCity(latt, long) {
+  return callApi(`/api/location/search/?lattlong=${latt},${long}`);
+}
+
+export function getCityWeather(id) {
+  return callApi(`/api/location/${id}/`);
 }
 
 // Private functions

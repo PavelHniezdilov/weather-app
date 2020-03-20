@@ -7,17 +7,18 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build-apk": "react-native run-android --variant=release"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.8.1",
-    "@react-native-community/geolocation": "^2.0.2",
     "@react-native-community/masked-view": "^0.1.7",
-    "@react-native-community/netinfo": "^5.6.2",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
+    "react-native-geolocation-service": "^4.0.0",
     "react-native-gesture-handler": "^1.6.0",
+    "react-native-maps": "0.27.0",
+    "react-native-picker-select": "^6.6.0",
     "react-native-reanimated": "^1.7.0",
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.3.0",
@@ -27,7 +28,6 @@
     "react-redux": "^7.2.0",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
-    "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {

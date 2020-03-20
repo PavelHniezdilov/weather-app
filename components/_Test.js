@@ -2,20 +2,18 @@ import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import PropTypes from 'prop-types';
 
-const AuthScreen = props => {
+const Test = props => {
   return (
     <View style={styles.wrap}>
-      <Text>AuthScreen</Text>
+      <Text>Test</Text>
     </View>
   );
 };
 
+Test.propTypes = {};
+
 const styles = StyleSheet.create({
-  wrap: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  wrap: {},
 });
 
-export default AuthScreen;
+export default Test;

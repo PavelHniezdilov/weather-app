@@ -1,13 +1,15 @@
 import {createAppContainer} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 
-import AuthScreen from '../sreens/AuthScreen';
-import MainScreen from '../sreens/MainScreen';
+import CityScreen from '../sreens/CityScreen';
+import WeatherDataScreen from '../sreens/WeatherDataScreen';
+import LocationScreen from '../sreens/LocationScreen';
 
 const CompanyNavigator = createStackNavigator(
   {
-    Main: MainScreen,
-    Auth: AuthScreen,
+    Location: LocationScreen,
+    City: CityScreen,
+    WeatherData: WeatherDataScreen,
   },
   {
     headerMode: 'none',

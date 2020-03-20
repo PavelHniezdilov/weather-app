@@ -1,5 +1,6 @@
 export default {
   // main
-  main_fill: '#fff',
-  main_text: '#2d3337',
+  main_fill: '#9f69a7',
+  main_text: '#fff',
+  spinner: '#fff',
 };
